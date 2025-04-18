@@ -44,12 +44,12 @@ export default function RootLayout({
             </div>
             <div className="flex items-center gap-4">
               <SignedOut>
-                <SignInButton>
+                <SignInButton mode="redirect" forceRedirectUrl="/dashboard">
                   <button className="px-4 py-2 rounded-lg border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 dark:hover:bg-blue-900 transition">
                     Login
                   </button>
                 </SignInButton>
-                <SignUpButton>
+                <SignUpButton mode="redirect" forceRedirectUrl="/dashboard">
                   <button className="px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition">
                     Create an Account
                   </button>
