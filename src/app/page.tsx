@@ -16,7 +16,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <SignUpButton>
               <button className="cursor-pointer px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition order-1 sm:order-none">
-                Create an Account
+                Let's get started
               </button>
             </SignUpButton>
             <SignInButton>
