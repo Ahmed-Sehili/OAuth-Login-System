@@ -62,8 +62,7 @@ export default function RootLayout({
             </main>
             <footer className="bg-white/80 dark:bg-zinc-900/80 shadow-inner border-t border-zinc-200 dark:border-zinc-800 py-4">
               <div className="max-w-7xl mx-auto px-4 text-center text-sm text-gray-500 dark:text-gray-400">
-                © {new Date().getFullYear()} OAuth Login System. All rights
-                reserved.
+                © {new Date().getFullYear()} Ahmed Sehili. All rights reserved.
               </div>
             </footer>
           </div>

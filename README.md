@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OAuth Login System 🔐
 
-## Getting Started
+A modern authentication system built with [Next.js](https://nextjs.org/), [Clerk](https://clerk.com/), and [Tailwind CSS](https://tailwindcss.com/). Securely authenticate users using OAuth providers with a beautiful, responsive UI.
 
-First, run the development server:
+## Features ✨
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🔑 OAuth authentication with Clerk (Google, GitHub, etc.)
+- 📝 Secure sign up, sign in, and sign out flows
+- 🛡️ Protected dashboard for authenticated users
+- 📱 Responsive, modern UI with Tailwind CSS
+- 🌈 Animated gradient backgrounds and custom theming
+- 👤 User profile display (name, email, avatar)
+
+## Technologies Used 🛠️
+
+- [Next.js 15](https://nextjs.org/) ⚡
+- [React 19](https://react.dev/) ⚛️
+- [Clerk](https://clerk.com/) for authentication 🔐
+- [Tailwind CSS 4](https://tailwindcss.com/) and plugins 🎨
+- TypeScript 📝
+
+## Project Structure 🗂️
+
+```text
+.
+├── .env.example           # Example environment variables
+├── package.json           # Project metadata and dependencies
+├── tailwind.config.js     # Tailwind CSS configuration
+├── next.config.ts         # Next.js configuration
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx     # Root layout and metadata
+│   │   ├── page.tsx       # Landing page (sign in/up)
+│   │   ├── favicon.ico    # App favicon
+│   │   └── dashboard/
+│   │       └── page.tsx   # Protected dashboard for users
+│   ├── middleware.ts      # Clerk authentication middleware
+│   └── styles/
+│       └── globals.css    # Global styles (Tailwind CSS)
+├── README.md              # Project documentation
+└── ...                    # Other config/build files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting Started 🚀
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Ahmed-Sehili/OAuth-Login-System
+   cd oauth-login-system
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+3. **Configure environment variables:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   - Copy `.env.example` to `.env` and fill in your [Clerk](https://clerk.com/) keys:
+     ```env
+     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_[your-publishable-key]
+     CLERK_SECRET_KEY=sk_test_[your-secret-key]
+     NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/dashboard
+     NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL=/dashboard
+     ```
 
-## Learn More
+4. **Run the development server:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Open [http://localhost:3000](http://localhost:3000) in your browser.** 🌐
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage 🧑‍💻
 
-## Deploy on Vercel
+- 🏠 Visit the home page to sign up or sign in with OAuth providers.
+- 🚪 Authenticated users are redirected to a protected dashboard displaying their profile info.
+- 🔓 Sign out securely from the dashboard.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License 📄
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
